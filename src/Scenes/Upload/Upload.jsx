@@ -44,25 +44,25 @@ export default function Upload() {
     console.log("starting", totalCount);
     setUploadCountTotal(totalCount);
 
-    const uploadImages = files => {
-      const data = new FormData();
-      for (const file of files) {
-        // console.log("file1", file);
-        data.append("files", file);
-        // console.log("data1", data);
-        // return;
-      }
+    // const uploadImages = files => {
+    //   const data = new FormData();
+    //   for (const file of files) {
+    //     // console.log("file1", file);
+    //     data.append("files", file);
+    //     // console.log("data1", data);
+    //     // return;
+    //   }
 
-      postImages(data).then(res => {
-        console.log("images uploaded");
-        document.querySelector("[type=file]").value = "";
-        setLoading(false);
-        setUploadSuccess(totalCount);
-        setTimeout(() => {
-          setUploadSuccess(0);
-        }, 10000);
-      });
-    };
+    //   postImages(data).then(res => {
+    //     console.log("images uploaded");
+    //     document.querySelector("[type=file]").value = "";
+    //     setLoading(false);
+    //     setUploadSuccess(totalCount);
+    //     setTimeout(() => {
+    //       setUploadSuccess(0);
+    //     }, 10000);
+    //   });
+    // };
 
     const uploadImageRecc = (files, count, totalCount) => {
       if (files.length === 0) return;
@@ -137,7 +137,7 @@ export default function Upload() {
             message={`Laster opp... ${uploadCount} av ${uploadCountTotal}`}
           />
         )}
-        {!loading && uploadSuccess == 1 && (
+        {!loading && uploadSuccess === 1 && (
           <Typography>
             Image uploaded <CheckIcon style={{ color: "green" }} />
           </Typography>
