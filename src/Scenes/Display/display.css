@@ -1,0 +1,37 @@
+.display-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.display-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.close {
+  color: black;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+}
+
+.filteredimage {
+  padding: 20px;
+  height: 200px;
+  object-fit: contain;
+  cursor: default;
+}
+
+.logo-wrapper {
+  /* margin: -50px 0 0 -50px; */
+  padding: 20px;
+}
+
+.logo {
+  /* margin: auto auto -100px auto; */
+  margin: auto;
+  width: 140px;
+  height: 96px;
+  background: url(../../assets/img/monogram_fixed.png) no-repeat 0 0;
+  background-size: cover;
+}
